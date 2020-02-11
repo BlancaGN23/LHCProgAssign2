@@ -1,0 +1,34 @@
+
+//include basic headers
+#include <iostream>
+Using namespace std;
+
+//declare input x as a float, that is, a number (couldn’t get it to work with strings)
+float x;
+
+int main(){
+//declare vector
+Std∷vector<float>Q;
+
+//while loop – will keep prompting until x = 2, which means no in this case
+while (x !=2) {
+//prompts user to enter 3 to add another number, or 2 to terminate program
+cout ≪ “To continue, press 3; to terminate, press 2   “;
+//store input as variable x
+cin≫x;
+
+//if number entered is not equal to 3(yes), or no, program will terminate
+if (x != 3){cout≪”good bye” ≪endl; return 0;}
+
+//if yes, generate a random number 2 from 0-1 (2%), store this r in Q vector by adding it to end of vector list (push_back). 
+else{
+int r=rand()%2;
+Q.push_back(r);
+
+	//for values of y in the list of Q, print all values
+	 for (float y:Q){
+	//& prints address of each random assigned variable
+	cout≪&y≪endl;
+	cout≪y≪endl;}}
+	}
+}}
