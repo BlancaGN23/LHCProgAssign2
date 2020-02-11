@@ -1,0 +1,58 @@
+//include basic headers
+#include <iostream>
+#include <vector>
+#include <math.h>
+
+Using namespace std;
+
+Int main(){
+	//declare the variables we’re using. There’s a lot because I split the standard deviation in 	multiple steps
+	float x;
+	float Qsum = 0;
+	float Qavg = 0;
+	float Qstdv = 0;
+	float Qdiff = 0;
+	float Qsq = 0;
+	float Qsq2 = 0;
+
+//set vector list values as given
+//push_back adds the number to the end of the vector list
+//declare vector, std∷vector → sequence container that encapsulates dynamic arrays
+
+Std∷vector<float>Q;
+Q.push_back(2.3);
+Q.push_back(4.7);
+Q.push_back(0.1);
+Q.push_back(6.4);
+Q.push_back(3.8);
+Q.push_back(9.6);
+Q.push_back(9.0);
+Q.push_back(6.1);
+Q.push_back(7.3);
+Q.push_back(2.2);
+
+//now computation begins!
+
+for (float x:Q){
+//assigning variable x that number in the vector, going through all of them
+//We had said Qsum is initially 0, each number in the vector list is added to the running sum until all the numbers in the vector sum are added
+	Qsum = Qsum + x;}
+
+\\Q.size() is N, the amount of numbers in the vector
+Qavg = Qsum/Q.size();
+
+//now onto standard deviation, I split the math into multiple steps
+//separate for loop still in the main function
+
+for (float x:Q){
+	Qdiff = x-Qavg;
+	Qsq = Qdiff*Qdiff;
+	Qsq2 = Qsq/Q.size();
+	Qstdv  sqrt(Qsq);}
+
+//now we can print stuff out
+cout≪”The sum is  “≪Qsum≪endl;
+
+cout≪”The average is  “≪Qavg≪endl;
+
+cout≪”The standard deviation is  “≪Qstdv≪endl;
