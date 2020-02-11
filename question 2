@@ -1,0 +1,31 @@
+//include basic headers
+#include <iostream>
+Using namespace std;
+
+Int main(){
+	//set the initial values of all the variables we’ll be using, set as floats
+	//x is the numbers 0 – 1000, y is the running sum of multiples, a and b aren’t specified as 	anything yet
+	float x = 0;
+	float y=0;
+	float a;
+	float b;
+
+//use a while loop, while the number being checked for multiples is below 1000
+While (x<1000){
+	//set our undefined variables to possible multiples
+	a = x/3;
+	b = x/5;
+	//now we’ll be checking to see if a and b are integers – if yes, then that number x is a 	multiple. In that case, we will add that x to the running sum, y. If not, then we will move 	on to the next x
+	if (a==int(a)){
+	 y = y+x;
+	 x = x+1;}
+	else if (b==int(b)){
+	 y = y+x;
+	 x = x+1;}
+	else{
+	 x = x+1;}
+}
+//after you’ve checked all numbers from 1 – 1000, print out the running sum total, y
+Cout≪y≪endl;}
+
+
